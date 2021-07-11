@@ -354,7 +354,7 @@ function chatRoomFull() {
     "Chat room is full. Check to make sure you don't have multiple open tabs, or try with a new room link"
   );
   // Exit room and redirect
-  window.location.href = "/newcall";
+  window.location.href = "/";
 }
 
 // Reposition local video to top left of remote video
@@ -392,51 +392,6 @@ function windowResized() {
   rePositionLocalVideo();
   rePositionCaptions();
 }
-
-// Fullscreen
-// function openFullscreen() {
-//   try {
-//     // var elem = document.getElementById("remote-video");
-//     var elem = document.getElementById("body");
-//     if (!isFullscreen) {
-//       VideoChat.remoteVideo.classList.add("fullscreen");
-//       isFullscreen = true;
-//       if (elem.requestFullscreen) {
-//         elem.requestFullscreen();
-//       } else if (elem.mozRequestFullScreen) {
-//         /* Firefox */
-//         elem.mozRequestFullScreen();
-//       } else if (elem.webkitRequestFullscreen) {
-//         /* Chrome, Safari and Opera */
-//
-//         elem.webkitRequestFullscreen();
-//         setTimeout(windowResized, 1000);
-//       } else if (elem.msRequestFullscreen) {
-//         /* IE/Edge */
-//         elem.msRequestFullscreen();
-//       }
-//     } else {
-//       isFullscreen = false;
-//       VideoChat.remoteVideo.classList.remove("fullscreen");
-//       if (document.exitFullscreen) {
-//         document.exitFullscreen();
-//       } else if (document.mozCancelFullScreen) {
-//         /* Firefox */
-//         document.mozCancelFullScreen();
-//       } else if (document.webkitExitFullscreen) {
-//         /* Chrome, Safari and Opera */
-//         document.webkitExitFullscreen();
-//       } else if (document.msExitFullscreen) {
-//         /* IE/Edge */
-//         document.msExitFullscreen();
-//       }
-//     }
-//   } catch (e) {
-//     logIt(e);
-//   }
-//   setTimeout(windowResized, 1000);
-// }
-// End Fullscreen
 
 // Mute microphone
 function muteMicrophone() {
@@ -703,51 +658,18 @@ function recieveCaptions(captions) {
 }
 // End Live caption
 
-// Translation
-// function translate(text) {
-//   let fromLang = "en";
-//   let toLang = "zh";
-//   // let text = "hello how are you?";
-//   const API_KEY = "APIKEYHERE";
-//   let gurl = `https://translation.googleapis.com/language/translate/v2?key=${API_KEY}`;
-//   gurl += "&q=" + encodeURI(text);
-//   gurl += `&source=${fromLang}`;
-//   gurl += `&target=${toLang}`;
-//   fetch(gurl, {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Accept: "application/json",
-//     },
-//   })
-//     .then((res) => res.json())
-//     .then((response) => {
-//       // console.log("response from google: ", response);
-//       // return response["data"]["translations"][0]["translatedText"];
-//       logIt(response);
-//       var translatedText =
-//         response["data"]["translations"][0]["translatedText"];
-//       console.log(translatedText);
-//       dataChanel.send("cap:" + translatedText);
-//     })
-//     .catch((error) => {
-//       console.log("There was an error with the translation request: ", error);
-//     });
-// }
-// End Translation
-
 // Text Chat
 // Add text message to chat screen on page
 function addMessageToScreen(msg, isOwnMessage) {
   if (isOwnMessage) {
     $(".chat-messages").append(
-      '<div class="message-item customer cssanimation fadeInBottom"><div class="message-bloc"><div class="message">' +
+      '<div class="message-item customer css animation fadeInBottom"><div class="message-bloc"><div class="message">' +
         msg +
         "</div></div></div>"
     );
   } else {
     $(".chat-messages").append(
-      '<div class="message-item moderator cssanimation fadeInBottom"><div class="message-bloc"><div class="message">' +
+      '<div class="message-item moderator css animation fadeInBottom"><div class="message-bloc"><div class="message">' +
         msg +
         "</div></div></div>"
     );
@@ -798,13 +720,13 @@ function toggleChat() {
   var chatText = $("#chat-text");
   if (entireChat.is(":visible")) {
     entireChat.fadeOut();
-    // Update show chat buttton
+    // Update show chat button
     chatText.text("Show Chat");
     chatIcon.classList.remove("fa-comment-slash");
     chatIcon.classList.add("fa-comment");
   } else {
     entireChat.fadeIn();
-    // Update show chat buttton
+    // Update show chat button
     chatText.text("Hide Chat");
     chatIcon.classList.remove("fa-comment");
     chatIcon.classList.add("fa-comment-slash");
