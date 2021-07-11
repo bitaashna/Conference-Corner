@@ -27,10 +27,6 @@ app.use(function (req, res, next) {
   }
 });
 
-// app.get("/", function (req, res) {
-//   res.sendFile(path.join(public, "landing.html"));
-// });
-
 app.get("/", function (req, res) {
   res.sendFile(path.join(public, "newcall.html"));
 });

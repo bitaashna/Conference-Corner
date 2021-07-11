@@ -116,9 +116,11 @@ var nouns = [
   "sloth",
   "swan",
 ];
-
+function suggestAnotherName(){
 var adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 var noun = nouns[Math.floor(Math.random() * nouns.length)];
 noun = noun.charAt(0).toUpperCase() + noun.substring(1);
 adjective = adjective.charAt(0).toUpperCase() + adjective.substring(1);
 document.getElementById("input-01").value = adjective + noun;
+}
+suggestAnotherName();
