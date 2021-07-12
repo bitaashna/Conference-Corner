@@ -82,18 +82,18 @@ your call or you can use the generated name or ask for another
 name by clicking on *SUGGEST NEW ONE*. And then you can
 straightaway start the call by clicking on *GO TO MY CALL* button.
 
-![image](public\images\landing_page.png)
+![image](public/images/landing_page.png)
 
 Then you'll be redirected to the call.
 To invite over other friends in this call, send them the call name.
 You can get the call name from the url bar itself.
 
-![image](public\images\link.png)
+![image](public/images/link.png)
 
 And also, You may find call link at the top of screen and then click on 
 *COPY LINK* to copy it. See the picture below!
 
-![image](public\images\call_name_noti.png)
+![image](public/images/call_name_noti.png)
 
 For joining a call, paste the previously copied link.
 
@@ -101,7 +101,7 @@ On the left side, you see the list of various buttons. On the right
 hand side, you can see the chatbox. Go ahead and type in the messages
 you wanna send to your callee. Then click on enter to send message.
 
-![image](public\images\chat.png)
+![image](public/images/chat.png)
 
 When you enter the video call, you'll see your callee video along
 with yours on the screen. Make sure that more than Two people
@@ -116,7 +116,7 @@ might see some buttons.
 
 **Start Live Caption:** For recognized text on the screen when you play some audio or video or when the person speaks.
 
-![image](public\images\live_caption.png)
+![image](public/images/live_caption.png)
 
 **End Call:** For ending the call, click on the end call button.
 
