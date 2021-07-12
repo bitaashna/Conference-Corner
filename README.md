@@ -27,11 +27,26 @@ This is a fully functional Video Calling WebApp powered by WebRTC using Twilio S
 
 For running the application locally, all you need are 4 simple steps!
 
-- Node Installation
 - Cloning the Repository
+- Set Up Credentials
+- Node Installation
 - Run
 
-**1. Node Installation**
+**1. Cloning the Repository**
+
+    $ git clone https://github.com/bitaashna/Conference-Corner.git
+    $ cd Conference-Corner
+
+###
+**2. Setting up Credentials**
+
+- Rename .env.template to .env
+- Sign up for free twilio account https://www.twilio.com/login
+- Get your Account SID and Auth Token from the Twilio console
+- Fill in your credentials in the .env file
+  
+###
+**3. Node Installation**
 
 - Node installation on Windows
 
@@ -60,13 +75,7 @@ If you need to update `npm`, you can make it using `npm`!
     $ npm install npm -g
 
 ###
-**2. Cloning the Repository**
-
-    $ git clone https://github.com/bitaashna/Conference-Corner.git
-    $ cd Conference-Corner
-
-###
-**3. Run!**
+**4. Run!**
 
  Run the following command.
 
